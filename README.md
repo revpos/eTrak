@@ -1,4 +1,4 @@
-# Event Tracker
+# eTrak
 
 <div align="center">
 
@@ -34,9 +34,9 @@ Track, process, and analyze events.
 
 ## 🧠 Overview
 
-**Event Tracker** is a lightweight yet an effective event tracking service written in Go, like a mini analytics pipeline. Its designed to be modular for quick scalability and clear project layout.
+**eTrak** is a lightweight yet an effective event tracking service written in Go, like a mini analytics pipeline. Its designed to be modular for quick scalability and clear project layout.
 
-> **Why Event Tracker?**  
+> **Why eTrak?**  
 > Built with a "zero-dependency philosophy" in mind — no heavy frameworks, idiomatic Go throughout, raw SQL for migrations and deployable as a single binary.
 
 This project focuses on 
@@ -82,7 +82,7 @@ Redis Cache
 
 Here is a reference image for the manual project initialization.
 
-![Init](https://github.com/revpos/event-tracker/blob/main/images/init.png)
+![Init](https://github.com/revpos/eTrak/blob/main/images/init.png)
 
 For a quick setup, run the below commands:
 
@@ -96,8 +96,8 @@ $ ./scripts/scaffold-go-project your-name module-name
 
 #### 2.1 Clone repo
 ```bash
-git clone https://github.com/your-username/event-tracker.git
-cd event-tracker
+git clone https://github.com/<your-username>/eTrak.git
+cd eTrak
 ```
 #### 2.2 Setup PostgreSQL
 
@@ -184,6 +184,6 @@ Copyright (c) 2026 Revanth Madupoju
 ---
 <div align="center">
 
-Made with ❤️ for Go &nbsp;|&nbsp; [⭐ Star on GitHub](https://github.com/revpos/event-tracker)
+Made with ❤️ for Go &nbsp;|&nbsp; [⭐ Star on GitHub](https://github.com/revpos/eTrak)
 
 </div>
