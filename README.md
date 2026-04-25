@@ -1,12 +1,14 @@
-# Event Tracker
+
 
 <div align="center">
 
-![Go Version](https://img.shields.io/badge/Go-1.25.0%2B-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+# eTrak
 
+![Go Version](https://img.shields.io/badge/Go-1.25%2B-00ADD8?logo=go&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-**An event tracking system built in Go.**  
+**An event tracking system built in Go.**
+
 Track, process, and analyze events.
 
 </div>
@@ -19,24 +21,17 @@ Track, process, and analyze events.
 - [Architecture](#️-architecture)
 - [Prerequisites](#-prerequisites)
 - [Getting Started](#getting-started)
-  - [Manual](#1-manual)
-  - [Git](#2-git)
-    - [Clone Repo](#21-clone-repo)
-    - [Setup PostgreSQL](#22-setup-postgresql)
-    - [Run Migrations](#23-run-migrations)
-    - [Run Server](#24-run-server)
-- [API Protocols - HTTP](#-api-protocols---http)
+- [API Protocols](#-api-protocols)
 - [Example Request](#-example-request)
 - [Contributions](#-contributions)
 - [License](#-license)
 
 
-
 ## 🧠 Overview
 
-**Event Tracker** is a lightweight yet an effective event tracking service written in Go, like a mini analytics pipeline. Its designed to be modular for quick scalability and clear project layout.
+**eTrak** is a lightweight yet an effective event tracking service written in Go, like a mini analytics pipeline. Its designed to be modular for quick scalability and clear project layout.
 
-> **Why Event Tracker?**  
+> **Why eTrak?**
 > Built with a "zero-dependency philosophy" in mind — no heavy frameworks, idiomatic Go throughout, raw SQL for migrations and deployable as a single binary.
 
 This project focuses on 
@@ -78,51 +73,35 @@ Redis Cache
 
 ## ⚙️ Getting Started
 
-### 1. Manual Way:
-
-Here is a reference image for the manual project initialization.
-
-![Init](https://github.com/revpos/event-tracker/blob/main/images/init.png)
-
-For a quick setup, run the below commands:
-
+#### 1. Clone repo
 ```sh
-$ chmod +x scripts/scaffold-go-project.yml
-
-$ ./scripts/scaffold-go-project your-name module-name
-```
-
-### 2. Git Way: 
-
-#### 2.1 Clone repo
-```bash
 git clone https://github.com/your-username/event-tracker.git
 cd event-tracker
 ```
-#### 2.2 Setup PostgreSQL
+#### 2. Setup PostgreSQL
 
-2.2.1 Create DB:
+2.1 Create DB:
 
 ```SQL
 CREATE DATABASE events;
 ```
 
-2.2.2 Update connection string in environment:
+2.2 Update connection string in environment:
 
-```
+```sh
 export DB_URL="postgres://user:pass@localhost:5432/events?sslmode=disable"
 ```
 
-#### 2.3 Run migrations
+#### 3. Run migrations
 
 ```sh
-$ psql -d events -f migrations/001_create_events.sql
+psql -d events -f migrations/001_create_events.sql
 ```
 
-#### 2.4 Run server
+#### 4. Start/Run the server
 
 ```sh
-$ go run cmd/server/main.go
+go run cmd/server/main.go
 ```
 
 Server runs on: http://localhost:8080
@@ -131,7 +110,8 @@ Server runs on: http://localhost:8080
 ## 📡 API Protocols - HTTP
 
 HTTP Request:
-```
+
+```json
 POST /track
 {
   "user_id": "123",
@@ -142,7 +122,7 @@ POST /track
 }
 ```
 
-HTTP Response: `202 Accepted`
+> HTTP Response: `202 Accepted`
 
 
 ### 🧪 Example Request
@@ -166,9 +146,9 @@ $ curl -X POST http://localhost:8080/track \
 
 
 ## 🤝 Contributions
-PRs are welcome.
+> PRs are welcome.
 
-### Start with:
+#### Start with:
 - improving error handling
 - adding validation
 - writing tests
@@ -180,10 +160,10 @@ MIT License
 
 Copyright (c) 2026 Revanth Madupoju
 
-
+---
 ---
 <div align="center">
 
-Made with ❤️ for Go &nbsp;|&nbsp; [⭐ Star on GitHub](https://github.com/revpos/event-tracker)
+Made with ❤️ for Go &nbsp;|&nbsp; [⭐ Add a Star on Github](https://github.com/revpos/eTrak)
 
 </div>
