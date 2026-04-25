@@ -75,8 +75,8 @@ Redis Cache
 
 #### 1. Clone repo
 ```sh
-git clone https://github.com/your-username/event-tracker.git
-cd event-tracker
+git clone https://github.com/revpos/eTrak.git
+cd eTrak
 ```
 #### 2. Setup PostgreSQL
 
