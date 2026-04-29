@@ -1,0 +1,26 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - database
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: etpguser
+      DB_PASSWORD: etpgpswd
+      DB_NAME: etrakpgdb
+    restart: unless-stopped
+
+  database:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: etpguser
+      POSTGRES_PASSWORD: etpgpswd
+      POSTGRES_DB: etrakpgdb
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+volumes:
+  pg_data:
